@@ -1,0 +1,10 @@
+# PinNote Official Robots.txt
+# Optimized for Google, Bing, DuckDuckGo, Yahoo, and Apple Search Crawlers
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /downloads/
+
+# Sitemap location
+Sitemap: https://pinnote.app/sitemap.xml

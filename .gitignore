@@ -1,0 +1,8 @@
+# Python & Temporary Files
+__pycache__/
+*.pyc
+capture_hero_shots.py
+
+# OS Metadata
+.DS_Store
+Thumbs.db

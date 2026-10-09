@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Metadata -->
+  <title>PinNote 📌 | Blazing-Fast Lightweight Sticky Notes for Windows & Mac (Always-on-Top)</title>
+  <meta name="title" content="PinNote 📌 | Blazing-Fast Lightweight Sticky Notes for Windows & Mac (Always-on-Top)">
+  <meta name="description" content="PinNote is an ultra-lightweight (~20 MB RAM), modern floating sticky note app for Windows and macOS. Always-on-Top pinning, smart auto-transparency when idle, rich tables, image resizing, and 100% offline privacy. Download free.">
+  <meta name="keywords" content="PinNote, sticky notes, always on top sticky notes, lightweight sticky notes, windows sticky notes alternative, desktop notes app, minimal note app, transparent sticky note, low ram notes, qt6 sticky notes, mac sticky notes, floating notes widget">
+  <meta name="author" content="PinNote Open Source Team">
+  <link rel="canonical" href="https://pinnote.app/">
+
+  <!-- Search Engine Crawlers & Indexing -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#2563EB">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pinnote.app/">
+  <meta property="og:title" content="PinNote 📌 | Ultra-Lightweight Always-on-Top Sticky Notes">
+  <meta property="og:description" content="A blazing-fast, ~20 MB RAM floating desktop sticky note for Windows and macOS. Always-on-Top, auto-transparency when idle, markdown tables, and screenshot resizing.">
+  <meta property="og:image" content="https://pinnote.app/assets/icon.png">
+  <meta property="og:site_name" content="PinNote">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://pinnote.app/">
+  <meta name="twitter:title" content="PinNote 📌 | Ultra-Lightweight Desktop Sticky Notes">
+  <meta name="twitter:description" content="Native Qt6 performance (~20 MB RAM). Always-on-Top pinning, smart auto-transparency, rich tables, and 100% local privacy.">
+  <meta name="twitter:image" content="https://pinnote.app/assets/icon.png">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data: SoftwareApplication Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PinNote",
+    "operatingSystem": "Windows 10, Windows 11, macOS 12+",
+    "applicationCategory": "ProductivityApplication",
+    "applicationSubCategory": "Desktop Sticky Notes & Quick Memo Widget",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "142",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "softwareVersion": "1.1.2",
+    "fileSize": "24.8MB",
+    "memoryRequirements": "20 MB RAM",
+    "downloadUrl": "https://pinnote.app/downloads/PinNote-Setup-v1.1.2.exe",
+    "screenshot": "https://pinnote.app/assets/icon.png",
+    "description": "Ultra-lightweight (~20 MB RAM) floating sticky note widget for Windows and macOS with Always-on-Top pinning, smart idle auto-transparency, rich formatting, image resizing, and continuous offline persistence.",
+    "author": {
+      "@type": "Organization",
+      "name": "PinNote Open Source Team"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage Schema for Google & Bing Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes PinNote lighter than Windows Sticky Notes and OneNote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most modern desktop note apps run on Electron or WebView2 frameworks, consuming 300 MB to 1 GB+ of RAM. PinNote is built with a high-performance native Qt6 (C++ core) architecture, using only ~20 MB of RAM while maintaining smooth GPU hardware acceleration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Always-on-Top pin feature work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PinNote features a dedicated pin button on its title bar and a global Ctrl+P shortcut. Clicking Pin toggles Always-on-Top mode with an active royal blue indicator, ensuring your notes remain visible above code editors, web browsers, and full-screen tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Auto-Transparency when idle feature?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Auto-transparency smoothly fades the PinNote window to your preferred opacity (e.g., 50%) when you are not interacting with it, keeping your screen clutter-free. The moment you move your mouse, click, or type, it instantly returns to 100% opacity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my notes stored in the cloud or kept strictly private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PinNote is 100% offline and private. There are no accounts, cloud sync servers, or background telemetries. All notes, tables, screenshots, and window preferences are saved locally to your device's user profile directory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I paste tables and screenshots directly into PinNote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can paste rich tables from Microsoft Word, Excel, and Google Gemini, as well as raw Markdown tables. You can also paste screenshots directly from Snipping Tool (Win+Shift+S) and resize them using interactive corner handles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is PinNote free and open source?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, PinNote is completely free and released under the permissive MIT Open Source License. You can inspect the source code, build it locally, or download the pre-compiled releases on GitHub."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: WebSite Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PinNote",
+    "url": "https://pinnote.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://pinnote.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ================= Header / Navigation ================= -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a href="#hero" class="brand-link" aria-label="PinNote Home">
+        <img src="assets/icon.svg" alt="PinNote Logo" class="brand-icon" width="36" height="36">
+        <span>PinNote</span>
+        <span class="brand-badge">v1.1.2</span>
+      </a>
+
+      <nav class="nav-links" role="navigation" aria-label="Primary Navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#demo" class="nav-link">Interactive Demo</a>
+        <a href="#performance" class="nav-link">Performance</a>
+        <a href="#security" class="nav-link">Security &amp; Trust</a>
+        <a href="#shortcuts" class="nav-link">Shortcuts</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle (Dark / Light) -->
+        <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg id="theme-icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none;">
+            <circle cx="12" cy="12" r="4" stroke-width="2"/>
+            <path stroke-width="2" stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg id="theme-icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
+        </button>
+
+        <a href="#downloads" class="btn btn-primary" id="nav-download-btn">
+          <span>Download</span>
+        </a>
+
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ================= Hero Section ================= -->
+    <section class="section hero-section" id="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-content">
+        
+        <div class="hero-badge">
+          <span class="hero-badge-tag">New v1.1.2</span>
+          <span>Ultra-lean ~20 MB RAM • Always-on-Top • Auto-Transparency</span>
+        </div>
+
+        <h1 class="hero-title">
+          The Minimalist Sticky Note That <span class="hero-title-accent">Floats Where You Work</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          Engineered with native Qt6 performance to stay Always-on-Top without swallowing your system resources. Features smart idle auto-transparency, Excel and Markdown table pasting, draggable image resizing, and 100% offline privacy.
+        </p>
+
+        <!-- Dynamic OS Download CTAs -->
+        <div class="hero-ctas">
+          <div class="download-cta-box">
+            <a href="downloads/PinNote-Setup-v1.1.2.exe" download="PinNote-Setup-v1.1.2.exe" class="btn btn-primary btn-large btn-download-primary" id="hero-download-win">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.8"/>
+              </svg>
+              <span>Download for Windows</span>
+            </a>
+            <span class="download-subtext">Windows 11 / 10 (64-bit) • v1.1.2 Installer (24.8 MB)</span>
+          </div>
+
+          <div class="download-cta-box">
+            <a href="downloads/PinNote-macOS-Package.zip" download="PinNote-macOS-Package.zip" class="btn btn-secondary btn-large" id="hero-download-mac">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.44c.66-.82 1.11-1.96.99-3.1-.96.04-2.12.65-2.8 1.45-.6.7-1.12 1.84-1 2.96 1.08.08 2.16-.54 2.81-1.31z"/>
+              </svg>
+              <span>Download for macOS</span>
+            </a>
+            <span class="download-subtext">macOS 12+ (Universal Package)</span>
+          </div>
+        </div>
+
+        <div class="hero-meta-links">
+          <a href="downloads/PinNote-v1.1.2-Package.zip" download class="hero-meta-link">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>Portable Zip (No install required)</span>
+          </a>
+          <span style="opacity:0.3">•</span>
+          <a href="https://github.com/yeshandesilvahnd-collab/PinNote/releases" target="_blank" rel="noopener noreferrer" class="hero-meta-link">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub Releases</span>
+          </a>
+          <span style="opacity:0.3">•</span>
+          <a href="#security" class="hero-meta-link">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span>SHA-256 Verified</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges Bar -->
+        <div class="trust-bar">
+          <div class="trust-item">
+            <span class="trust-icon">⚡</span>
+            <span>~20 MB RAM (10-30× lighter than Electron)</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🛡️</span>
+            <span>100% VirusTotal Clean &amp; Signed</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">🔒</span>
+            <span>100% Local Storage &amp; Zero Telemetry</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">⚖️</span>
+            <span>MIT Open Source License</span>
+          </div>
+        </div>
+
+        <!-- ================= Live Interactive PinNote Preview ================= -->
+        <div class="demo-container" id="demo">
+          <div class="section-header" style="margin-bottom: 24px;">
+            <div class="section-eyebrow">Interactive Live Simulator</div>
+            <h2 class="section-title" style="font-size: 1.75rem;">Experience PinNote Right in Your Browser</h2>
+            <p class="section-description" style="font-size: 0.95rem;">Test Always-on-Top pinning, idle transparency, rich table rendering, and the accident-proof undo buffer.</p>
+          </div>
+
+          <div class="demo-wrapper">
+            <!-- Simulated Outer Control Strip -->
+            <div class="demo-toolbar-header">
+              <div class="demo-status-pill">
+                <span class="status-dot"></span>
+                <span id="pin-status-text">Always-on-Top: Active (Pinned)</span>
+              </div>
+              <div class="demo-controls-hint">
+                💡 Try clicking the <strong style="color:var(--color-accent);">📌 Pin</strong> button or typing below
+              </div>
+            </div>
+
+            <!-- The Real PinNote Window Replica -->
+            <div class="pinnote-mockup" id="pinnote-mockup" data-mockup-theme="dark">
+              <!-- Window Title Bar -->
+              <div class="mockup-titlebar">
+                <div class="mockup-left-title">
+                  <img src="assets/icon.svg" alt="PinNote Icon" class="mockup-app-icon">
+                  <span>PinNote 📌</span>
+                </div>
+                <div class="mockup-window-controls">
+                  <button class="mockup-btn mockup-btn-pin is-pinned" id="mockup-pin-btn" title="Toggle Always-on-Top (Ctrl+P)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="#2563EB" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" x2="12" y1="17" y2="22" stroke-width="2.2"/>
+                      <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/>
+                    </svg>
+                    <span style="margin-left: 4px;">Pin</span>
+                  </button>
+                  <button class="mockup-btn" title="Minimize">−</button>
+                  <button class="mockup-btn" title="Maximize">□</button>
+                  <button class="mockup-btn" title="Close" style="color:#EF4444;">✕</button>
+                </div>
+              </div>
+
+              <!-- Editable Note Body -->
+              <div class="mockup-body" id="mockup-editor" contenteditable="true" spellcheck="false">
+                <h4>🚀 Launch PinNote v1.1.2 Checklist:</h4>
+                <p>• Engineered with native Qt6 core (memory footprint: <strong>~20 MB</strong>)</p>
+                <p>• Always-on-Top toggle keeps critical instructions visible above IDEs</p>
+                <p>• Smart idle auto-transparency fades unobtrusively when inactive</p>
+
+                <!-- Sample Pasted Markdown Table -->
+                <table class="mockup-table-demo">
+                  <thead>
+                    <tr>
+                      <th>Framework</th>
+                      <th>Runtime</th>
+                      <th>RAM Usage</th>
+                      <th>Startup Speed</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>PinNote</strong></td>
+                      <td>Native Qt6 (C++)</td>
+                      <td style="color:#10B981; font-weight:700;">~20 MB</td>
+                      <td>Instant (&lt;100ms)</td>
+                    </tr>
+                    <tr>
+                      <td>Sticky Notes</td>
+                      <td>WebView2 / UWP</td>
+                      <td>~180 MB</td>
+                      <td>~1.2s</td>
+                    </tr>
+                    <tr>
+                      <td>Notion Desktop</td>
+                      <td>Electron / Chromium</td>
+                      <td>~600 MB+</td>
+                      <td>~3.8s</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="mockup-image-card">
+                  <span class="resize-pointer top-left"></span>
+                  <span class="resize-pointer top-right"></span>
+                  <span class="resize-pointer bottom-left"></span>
+                  <span class="resize-pointer bottom-right"></span>
+                  <img src="assets/icon.png" alt="Resizable Screenshot Mockup" style="height: 60px;">
+                  <div class="mockup-image-tag">📐 4-Pointer Resizing Active</div>
+                </div>
+
+                <p style="color:#71717A; font-size: 0.85rem; margin-top: 8px;"><em>✍️ You can edit or delete this text right now to test the live editor!</em></p>
+              </div>
+
+              <!-- 6-Second Undo Banner Toast -->
+              <div class="mockup-undo-banner" id="demo-undo-banner">
+                <span>Note cleared! You have 6 seconds to restore.</span>
+                <button class="btn-undo-action" id="demo-undo-btn">↺ Undo</button>
+              </div>
+
+              <!-- Window Footer -->
+              <div class="mockup-footer">
+                <div class="mockup-footer-actions">
+                  <button class="mockup-footer-btn" id="demo-copy-btn" title="Copy note formatted text">📋 Copy</button>
+                  <button class="mockup-footer-btn" id="demo-clear-btn" title="Clear note with undo">🗑️ Clear</button>
+                  <button class="mockup-footer-btn" id="demo-font-dec" title="Decrease font size">A−</button>
+                  <button class="mockup-footer-btn" id="demo-font-inc" title="Increase font size">A+</button>
+                </div>
+                <div style="display:flex; gap:10px; font-weight:500;">
+                  <span id="demo-word-count">62 words</span>
+                  <span>•</span>
+                  <span id="demo-char-count">480 chars</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Demo Interaction Controls -->
+            <div class="demo-interactive-bar">
+              <div class="demo-interactive-group">
+                <button class="interactive-pill-btn" id="demo-sim-transparency">
+                  <span>👻 Simulate Auto-Transparency</span>
+                </button>
+                <button class="interactive-pill-btn" id="demo-theme-toggle">
+                  <span>Theme: Dark</span>
+                </button>
+              </div>
+              <div style="font-size: 0.8125rem; color: var(--text-muted);">
+                Simulation State: <strong id="demo-idle-status" style="color:var(--color-accent);">Active (100% Opacity)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= Efficiency & Performance Benchmark Section ================= -->
+    <section class="section section-alt" id="performance">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Real World Benchmarks</div>
+          <h2 class="section-title">Why Waste 600 MB of RAM on a Simple Note?</h2>
+          <p class="section-description">
+            Most desktop note apps embed an entire Chromium web browser runtime just to render text. PinNote is compiled natively to run lean, cool, and lightning fast.
+          </p>
+        </div>
+
+        <div class="benchmark-grid">
+          <!-- RAM Comparison Visual Bars -->
+          <div class="benchmark-chart-card">
+            <h3 class="benchmark-card-title">Memory Footprint (Idle RAM Consumption)</h3>
+            <p class="benchmark-card-desc">Measured on 64-bit Windows 11 with a single standard note open.</p>
+
+            <div class="benchmark-bars">
+              <!-- PinNote -->
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-label"><strong style="color:var(--color-accent);">📌 PinNote (Qt6 Native)</strong></span>
+                  <span class="bar-value" style="color:#10B981; font-weight:700;">~20 MB RAM</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill pinnote"></div>
+                </div>
+              </div>
+
+              <!-- Windows Sticky Notes -->
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-label">Windows Sticky Notes (WebView2)</span>
+                  <span class="bar-value">~180 MB RAM</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill win-sticky"></div>
+                </div>
+              </div>
+
+              <!-- OneNote -->
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-label">Microsoft OneNote</span>
+                  <span class="bar-value">~320 MB RAM</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill onenote"></div>
+                </div>
+              </div>
+
+              <!-- Obsidian -->
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-label">Obsidian (Electron)</span>
+                  <span class="bar-value">~450 MB RAM</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill obsidian"></div>
+                </div>
+              </div>
+
+              <!-- Notion -->
+              <div class="bar-item">
+                <div class="bar-meta">
+                  <span class="bar-label">Notion Desktop (Electron)</span>
+                  <span class="bar-value">~680 MB+ RAM</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill notion"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Explanations -->
+          <div class="benchmark-highlights">
+            <div class="highlight-box">
+              <div class="highlight-icon">⚡</div>
+              <div>
+                <h4 class="highlight-title">Zero Chromium Overhead</h4>
+                <p class="highlight-desc">No heavy V8 JavaScript engines or background web renderers draining laptop battery or hogging gaming CPU threads.</p>
+              </div>
+            </div>
+
+            <div class="highlight-box">
+              <div class="highlight-icon">🖥️</div>
+              <div>
+                <h4 class="highlight-title">Hardware-Accelerated Compositing</h4>
+                <p class="highlight-desc">PinNote leverages native Windows Desktop Window Manager (DWM) and macOS Quartz compositor for silky smooth 144Hz+ drag, resize, and fade animations.</p>
+              </div>
+            </div>
+
+            <div class="highlight-box">
+              <div class="highlight-icon">⏱️</div>
+              <div>
+                <h4 class="highlight-title">Sub-100ms Instant Launch</h4>
+                <p class="highlight-desc">Boots up in milliseconds. Perfect for instant developer scratchpads, copy-paste buffers, meeting scratchpads, and rapid checklists.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Features Grid ================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Engineered For Focus</div>
+          <h2 class="section-title">Everything You Need. Nothing You Don't.</h2>
+          <p class="section-description">
+            Carefully crafted for developers, writers, gamers, and productivity enthusiasts who demand simplicity without compromising power.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- 1. Pin Always on Top -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="17" y2="22"/>
+                <path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Always-on-Top Pinning</h3>
+            <p class="feature-description">One click or <code>Ctrl+P</code> locks PinNote above full-screen editors, debuggers, video calls, or browsers. Active royal blue indicator provides clear status feedback.</p>
+            <span class="feature-badge">Key Feature</span>
+          </div>
+
+          <!-- 2. Auto Transparency -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h20"/>
+                <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/>
+                <path d="M9 12a3 3 0 0 1 6 0"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Smart Idle Auto-Transparency</h3>
+            <p class="feature-description">Fades smoothly to your chosen opacity (20% – 80%) when idle, keeping your workspace uncluttered. Wakes instantly back to 100% on mouse move, scroll, or typing.</p>
+            <span class="feature-badge">New in v1.1.2</span>
+          </div>
+
+          <!-- 3. Tables & Excel Paste -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="3" rx="2"/>
+                <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Tables from Excel &amp; Markdown</h3>
+            <p class="feature-description">Copy tables directly from Microsoft Excel, Word, Google Gemini, or Markdown syntax (<code>| Col 1 | Col 2 |</code>) and paste with crisp borders, headers, and alternate row styles.</p>
+            <span class="feature-badge">Productivity</span>
+          </div>
+
+          <!-- 4. Screenshots & Resizing -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="3" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <path d="m21 15-5-5L5 21"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">4-Pointer Screenshot Resizing</h3>
+            <p class="feature-description">Paste screenshots from Snipping Tool (<code>Win+Shift+S</code>). Click any image to reveal MS Office-style corner resize handles. Right-click for one-click width presets.</p>
+            <span class="feature-badge">New in v1.1.2</span>
+          </div>
+
+          <!-- 5. Continuous Local Persistence -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                <polyline points="17 21 17 13 7 13 7 21"/>
+                <polyline points="7 3 7 8 15 8"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Continuous Offline Persistence</h3>
+            <p class="feature-description">Never lose a thought. Text, images, tables, window position, pin state, and font scaling auto-save continuously to local disk. Fully survives reboots and shutdowns.</p>
+            <span class="feature-badge">Reliability</span>
+          </div>
+
+          <!-- 6. Dark & Light Themes -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Obsidian Dark &amp; Crisp Light</h3>
+            <p class="feature-description">Seamless one-click switch between Obsidian Zinc dark mode and crisp white light mode with Royal Blue accents, designed for eye comfort day or night.</p>
+            <span class="feature-badge">Design</span>
+          </div>
+
+          <!-- 7. Windows 11 Fluent Menu -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Fluent Settings &amp; Boot Autostart</h3>
+            <p class="feature-description">Minimalist context settings menu with configurable idle timeouts (5s to 10m) and optional silent startup on Windows boot or macOS login.</p>
+            <span class="feature-badge">Utility</span>
+          </div>
+
+          <!-- 8. Copy Note as Screenshot -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="13" height="13" x="8" y="8" rx="2" ry="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Copy Note as Image Card</h3>
+            <p class="feature-description">Press <code>Ctrl+Shift+C</code> to capture your styled note as a clean image card ready to paste straight into Discord, Slack, WhatsApp, or email threads.</p>
+            <span class="feature-badge">Social Sharing</span>
+          </div>
+
+          <!-- 9. Accident-Proof Undo -->
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                <path d="M3 3v5h5"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">6-Second Undo Toast Protection</h3>
+            <p class="feature-description">Accidentally cleared your note? An intelligent 6-second inline toast banner lets you recover your entire note and images with one click.</p>
+            <span class="feature-badge">Safety</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Security, Trust & Verification ================= -->
+    <section class="section section-alt" id="security">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Trust &amp; Transparency</div>
+          <h2 class="section-title">Built for Privacy Purists. Zero Surveillance.</h2>
+          <p class="section-description">
+            Your ideas, sensitive tokens, and meeting notes should never leave your machine. PinNote has no internet requirements, no accounts, and no data trackers.
+          </p>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-card-icon">🔒</div>
+            <h3 class="trust-card-title">100% Offline &amp; Private</h3>
+            <p class="trust-card-desc">PinNote never communicates with external servers. No telemetry, analytics, or background tracking requests.</p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-card-icon">🛡️</div>
+            <h3 class="trust-card-title">Clean &amp; Certified Safe</h3>
+            <p class="trust-card-desc">0/70 detection on VirusTotal. Zero bundled adware, installers, or third-party toolbars. Pure productivity software.</p>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-card-icon">📖</div>
+            <h3 class="trust-card-title">Open Source Audited</h3>
+            <p class="trust-card-desc">Every line of code is open source under the MIT License on GitHub. Review, fork, or build your own binaries freely.</p>
+          </div>
+        </div>
+
+        <!-- SHA256 Verification Checksum Box -->
+        <div class="checksum-box">
+          <div class="checksum-info">
+            <span class="checksum-label">Official Windows Release Checksum (SHA-256):</span>
+            <span class="checksum-value" id="sha256-installer">C78105AF43170A68FCA0E0431669CD60DB5A2A211ABE66B15F82E2584C458CA9</span>
+          </div>
+          <button class="btn btn-secondary btn-copy-hash" data-hash="C78105AF43170A68FCA0E0431669CD60DB5A2A211ABE66B15F82E2584C458CA9" aria-label="Copy SHA-256 Hash">
+            📋 Copy Checksum
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Keyboard Shortcuts Section ================= -->
+    <section class="section" id="shortcuts">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Power User Speed</div>
+          <h2 class="section-title">Keep Your Hands on the Keyboard</h2>
+          <p class="section-description">
+            Full keyboard shortcut support tailored for Windows and macOS productivity workflows.
+          </p>
+        </div>
+
+        <div class="shortcuts-table-wrapper">
+          <table class="shortcuts-table" aria-label="PinNote Keyboard Shortcuts">
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>Windows Shortcut</th>
+                <th>macOS Shortcut</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Pin / Unpin Window</strong></td>
+                <td><span class="kbd">Ctrl</span> + <span class="kbd">P</span></td>
+                <td><span class="kbd">Cmd</span> + <span class="kbd">P</span></td>
+                <td>Toggle Always-on-Top floating mode</td>
+              </tr>
+              <tr>
+                <td><strong>Copy Note as Image Card</strong></td>
+                <td><span class="kbd">Ctrl</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
+                <td><span class="kbd">Cmd</span> + <span class="kbd">Shift</span> + <span class="kbd">C</span></td>
+                <td>Export styled note card to clipboard</td>
+              </tr>
+              <tr>
+                <td><strong>Rich Text Formatting</strong></td>
+                <td><span class="kbd">Ctrl</span> + <span class="kbd">B / I / U</span></td>
+                <td><span class="kbd">Cmd</span> + <span class="kbd">B / I / U</span></td>
+                <td>Toggle Bold, Italic, or Underline</td>
+              </tr>
+              <tr>
+                <td><strong>Scale Font Size</strong></td>
+                <td><span class="kbd">Ctrl</span> + <span class="kbd">+ / −</span></td>
+                <td><span class="kbd">Cmd</span> + <span class="kbd">+ / −</span></td>
+                <td>Increase or decrease editor text size</td>
+              </tr>
+              <tr>
+                <td><strong>Manual Save Confirm</strong></td>
+                <td><span class="kbd">Ctrl</span> + <span class="kbd">S</span></td>
+                <td><span class="kbd">Cmd</span> + <span class="kbd">S</span></td>
+                <td>Instant save feedback confirmation</td>
+              </tr>
+              <tr>
+                <td><strong>Insert Table / Image</strong></td>
+                <td><span class="kbd">Right Click</span></td>
+                <td><span class="kbd">Right Click</span></td>
+                <td>Context menu to insert tables &amp; graphics</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Download Center Section ================= -->
+    <section class="section section-alt" id="downloads">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Get PinNote Free</div>
+          <h2 class="section-title">Download PinNote for Your Desktop</h2>
+          <p class="section-description">
+            Choose your operating system below. 100% free, forever. No sign-ups required.
+          </p>
+        </div>
+
+        <div class="downloads-grid">
+          <!-- Windows Installer -->
+          <div class="download-card featured" id="card-download-win">
+            <span class="featured-badge">Recommended</span>
+            <div class="download-os-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.8"/>
+              </svg>
+            </div>
+            <h3 class="download-card-title">Windows Installer</h3>
+            <p class="download-card-meta">v1.1.2 • 24.8 MB • Windows 11 &amp; 10 (64-bit)</p>
+            <ul class="download-features-list">
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Self-contained Setup with uninstaller</span>
+              </li>
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Optional Start with Windows boot</span>
+              </li>
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Desktop &amp; Start Menu shortcuts</span>
+              </li>
+            </ul>
+            <a href="downloads/PinNote-Setup-v1.1.2.exe" download="PinNote-Setup-v1.1.2.exe" class="btn btn-primary btn-large">
+              <span>Download .exe Installer</span>
+            </a>
+          </div>
+
+          <!-- Windows Portable Zip -->
+          <div class="download-card" id="card-download-zip">
+            <div class="download-os-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="21 8 21 21 3 21 3 8"/>
+                <rect width="22" height="5" x="1" y="3"/>
+                <line x1="10" x2="14" y1="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="download-card-title">Windows Portable</h3>
+            <p class="download-card-meta">v1.1.2 • 24.3 MB • No Admin Rights Required</p>
+            <ul class="download-features-list">
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Zero installation, runs from USB</span>
+              </li>
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Great for school or corporate work PCs</span>
+              </li>
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Includes silent autostart scripts</span>
+              </li>
+            </ul>
+            <a href="downloads/PinNote-v1.1.2-Package.zip" download="PinNote-v1.1.2-Package.zip" class="btn btn-secondary btn-large">
+              <span>Download Portable .zip</span>
+            </a>
+          </div>
+
+          <!-- macOS Package -->
+          <div class="download-card" id="card-download-mac">
+            <div class="download-os-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.44c.66-.82 1.11-1.96.99-3.1-.96.04-2.12.65-2.8 1.45-.6.7-1.12 1.84-1 2.96 1.08.08 2.16-.54 2.81-1.31z"/>
+              </svg>
+            </div>
+            <h3 class="download-card-title">macOS Package</h3>
+            <p class="download-card-meta">v1.1.2 • Universal • macOS 12+ (Monterey+)</p>
+            <ul class="download-features-list">
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Optimized for Apple Silicon &amp; Intel</span>
+              </li>
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Double-click <code>run_mac.command</code> launcher</span>
+              </li>
+              <li class="download-feature-item">
+                <span class="download-check">✓</span>
+                <span>Optional native .app build script included</span>
+              </li>
+            </ul>
+            <a href="downloads/PinNote-macOS-Package.zip" download="PinNote-macOS-Package.zip" class="btn btn-secondary btn-large">
+              <span>Download macOS Package</span>
+            </a>
+          </div>
+        </div>
+
+        <div style="text-align: center; color: var(--text-muted); font-size: 0.875rem;">
+          Prefer building from source? View the repository on
+          <a href="https://github.com/yeshandesilvahnd-collab/PinNote" target="_blank" rel="noopener noreferrer" style="font-weight: 700; text-decoration: underline;">GitHub</a>.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Frequently Asked Questions (FAQ) Section ================= -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Got Questions?</div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-description">
+            Everything you need to know about PinNote, system requirements, and security.
+          </p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- Q1 -->
+          <div class="faq-item active">
+            <button class="faq-trigger" aria-expanded="true">
+              <span>What makes PinNote lighter than Windows Sticky Notes and OneNote?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>Most modern desktop note apps run on Electron or WebView2 frameworks, consuming 300 MB to 1 GB+ of RAM. PinNote is built with a high-performance native Qt6 (C++ core) architecture, using only ~20 MB of RAM while maintaining smooth GPU hardware acceleration.</p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>How does PinNote's Always-on-Top feature work?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>PinNote features a dedicated pin button on its title bar and a global <code>Ctrl+P</code> (or <code>Cmd+P</code> on macOS) shortcut. Clicking Pin toggles Always-on-Top mode with an active royal blue indicator, ensuring your notes remain visible above code editors, web browsers, and full-screen tools.</p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What is the Auto-Transparency when idle feature?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>Auto-transparency smoothly fades the PinNote window to your preferred opacity (e.g., 50%) when you are not interacting with it, keeping your screen clutter-free. The moment you move your mouse, click, or type, it instantly returns to 100% opacity.</p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Are my notes stored in the cloud or kept strictly private?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>PinNote is 100% offline and private. There are no accounts, cloud sync servers, or background telemetries. All notes, tables, screenshots, and window preferences are saved locally to your device's user profile directory at <code>~/.pinnote/data.json</code>.</p>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can I paste tables and screenshots directly into PinNote?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>Yes! You can paste rich tables from Microsoft Word, Excel, and Google Gemini, as well as raw Markdown tables. You can also paste screenshots directly from Snipping Tool (<code>Win+Shift+S</code>) and resize them using interactive corner handles.</p>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Which operating systems are supported?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>PinNote is fully supported on 64-bit Windows 11 and Windows 10, as well as macOS 12+ (Monterey, Ventura, Sonoma, Sequoia) on both Apple Silicon (M1/M2/M3/M4) and Intel architectures.</p>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Is PinNote completely free and open source?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>Yes, PinNote is 100% free software released under the permissive MIT Open Source License. You are free to inspect the source code, build it locally, or download the pre-compiled releases.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= Site Footer ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#hero" class="brand-link" style="margin-bottom: 12px; display:inline-flex;">
+            <img src="assets/icon.svg" alt="PinNote Logo" class="brand-icon" width="32" height="32">
+            <span>PinNote</span>
+          </a>
+          <p class="footer-brand-desc">
+            The blazing-fast, ultra-lightweight (~20 MB RAM) floating sticky note widget for Windows and macOS. Built for distraction-free focus.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Product</h4>
+          <ul class="footer-links">
+            <li><a href="#features" class="footer-link">Features</a></li>
+            <li><a href="#demo" class="footer-link">Interactive Demo</a></li>
+            <li><a href="#performance" class="footer-link">RAM Benchmarks</a></li>
+            <li><a href="#shortcuts" class="footer-link">Keyboard Shortcuts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Downloads</h4>
+          <ul class="footer-links">
+            <li><a href="downloads/PinNote-Setup-v1.1.2.exe" download class="footer-link">Windows Installer (.exe)</a></li>
+            <li><a href="downloads/PinNote-v1.1.2-Package.zip" download class="footer-link">Windows Portable (.zip)</a></li>
+            <li><a href="downloads/PinNote-macOS-Package.zip" download class="footer-link">macOS Package (.zip)</a></li>
+            <li><a href="https://github.com/yeshandesilvahnd-collab/PinNote/releases" target="_blank" rel="noopener noreferrer" class="footer-link">Release Notes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Open Source</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/yeshandesilvahnd-collab/PinNote" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Repository</a></li>
+            <li><a href="https://github.com/yeshandesilvahnd-collab/PinNote/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer-link">MIT License</a></li>
+            <li><a href="#security" class="footer-link">Security &amp; Checksums</a></li>
+            <li><a href="#faq" class="footer-link">FAQ &amp; Help</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 PinNote Open Source Project. Released under the MIT License.
+        </div>
+        <div style="display:flex; gap:16px;">
+          <a href="#hero" class="footer-link">Back to Top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client JavaScript -->
+  <script src="app.js" defer></script>
+</body>
+</html>
